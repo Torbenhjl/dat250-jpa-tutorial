@@ -13,6 +13,7 @@ dependencies {
     implementation("com.h2database:h2:2.2.220")
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.3")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    
 }
 
 java {
@@ -25,7 +26,17 @@ application {
     mainClass = "no.hvl.dat250.jpa.tutorial.basicexample.Main"
 }
 
+tasks.register<JavaExec>("runH2Console") {
+    mainClass.set("org.h2.tools.Server")
+    classpath = sourceSets["main"].runtimeClasspath
+    args = listOf("-web", "-browser")
+}
 
+
+
+
+/*
 tasks.named<Test>("test") {
     useJUnitPlatform()
 }
+*/

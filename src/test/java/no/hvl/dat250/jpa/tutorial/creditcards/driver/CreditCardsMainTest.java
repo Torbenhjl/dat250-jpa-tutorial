@@ -25,7 +25,7 @@ public class CreditCardsMainTest {
     }
 
     @Test
-    public void testDomainModelPersistence() {
+        public void testDomainModelPersistence() {
         // Run the main class to persist the objects.
         CreditCardsMain.main(new String[]{});
 

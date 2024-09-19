@@ -1,6 +1,8 @@
 package no.hvl.dat250.jpa.tutorial.creditcards;
 
 import jakarta.persistence.*;
+
+import java.util.ArrayList;
 import java.util.Collection;
 
 @Entity
@@ -9,17 +11,24 @@ public class Bank {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String name;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @OneToMany
+    private Collection<CreditCard> ownedCards = new ArrayList<>();
+
     public Long getId() {
         return id;
     }
 
     public String getName() {
-        // TODO: implement method!
-        return null;
+        return name;
     }
 
     public Collection<CreditCard> getOwnedCards() {
-        // TODO: implement method!
-        return null;
+        return ownedCards;
     }
 }
