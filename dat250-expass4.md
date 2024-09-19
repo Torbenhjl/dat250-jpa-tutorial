@@ -43,3 +43,5 @@ CUSTOMER and BANK store information about individuals and financial institutions
 For techincal problems i had one in particular regarding the test class. ![image](https://github.com/user-attachments/assets/933e7b86-01c5-44e3-9e59-fabb9d3dce73)
 As seen in the image the test failed even though expected and actual were identical. The problem was that in the code provided the Set of addresses, creditcards and so on were stored as a Collection so I asumed that was the intended data structure for storing those opbjects but the test was comparing it to Sets.
 When i changes from collection to set it worked.
+
+Code: https://github.com/Torbenhjl/dat250-jpa-tutorial.git
