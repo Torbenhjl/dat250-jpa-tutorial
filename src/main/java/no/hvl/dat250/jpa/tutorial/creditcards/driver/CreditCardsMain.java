@@ -39,7 +39,7 @@ public class CreditCardsMain {
     creditCard1.setCreditLimit(-10000);
     creditCard1.setPincode(pincode);
     creditCard1.setOwningBank(bank);
-
+    bank.getOwnedCards().add(creditCard1);
     // Create CreditCard 2
     CreditCard creditCard2 = new CreditCard();
     creditCard2.setNumber(123);
@@ -47,7 +47,7 @@ public class CreditCardsMain {
     creditCard2.setCreditLimit(2000);
     creditCard2.setPincode(pincode);
     creditCard2.setOwningBank(bank);
-
+    bank.getOwnedCards().add(creditCard2);
     // Create customer
     Customer customer = new Customer();
     customer.setName("Max Mustermann");
